@@ -10,9 +10,11 @@ part 'drug_model.g.dart';
 @freezed
 class DrugModel with _$DrugModel {
   const factory DrugModel({
-    required String firstName,
-    required String lastName,
-    required int age,
+    required String imageUrl,
+    required String drugName,
+    required String dosage,
+    required double price,
+    required bool requiresPrescription
   }) = _DrugModel;
 
   factory DrugModel.fromJson(Map<String, Object?> json) =>
