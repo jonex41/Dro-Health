@@ -4,6 +4,7 @@ import 'package:dex_app/Pages/doctors_page/doctors_screen.dart';
 import 'package:dex_app/Pages/home_page/home_screen.dart';
 import 'package:dex_app/Pages/pharmacy_page/pharmacy_screen.dart';
 import 'package:dex_app/Pages/profile_page/profile_screen.dart';
+import 'package:dex_app/Router/tab_page.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page|Screen,Route',
@@ -11,9 +12,28 @@ import 'package:dex_app/Pages/profile_page/profile_screen.dart';
     // app stack
     AutoRoute<String>(
       path: '/',
-      page: HomeScreen,
+      page: TabPage,
       // guards: [AuthGuard],
       children: [
+        AutoRoute(
+          path: 'Home',
+          page: EmptyRouterPage,
+          name: 'HomeTab',
+          initial: true,
+          maintainState: true,
+          children: [
+            AutoRoute(
+              path: '',
+              page: HomeScreen,
+            ),
+            /*  AutoRoute(
+              path: ':detail',
+              page: ColorDetailPage,
+              // fullscreenDialog: true,
+              // meta: {'hideBottomNav': true},
+            ), */
+          ],
+        ),
         AutoRoute(
           path: 'doctor',
           page: EmptyRouterPage,

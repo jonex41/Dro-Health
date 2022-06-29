@@ -5,7 +5,7 @@ import '../Utils/colors.dart';
 class AppButton extends StatelessWidget {
   final Widget child;
   final Gradient gradient = const LinearGradient(
-      colors: [primaryStartGradientColor, primaryLightColor]);
+      colors: [kPrimaryStartGradientColor, kPrimaryLightColor]);
   final double width;
   final double height;
   final VoidCallback onPressed;

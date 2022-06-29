@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: appPrimaryColor,
+        primaryColor: kAppPrimaryColor,
         fontFamily: 'ProximaNova',
         dividerTheme: DividerThemeData(
           color: blackColor.withOpacity(0.1),
