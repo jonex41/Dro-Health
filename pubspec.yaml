@@ -28,6 +28,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   auto_route: ^4.0.1
+  badges: ^2.0.3
   cached_network_image: ^3.2.1
   cupertino_icons: ^1.0.2
   flutter:
@@ -39,6 +40,7 @@ dependencies:
   font_awesome_flutter: ^10.1.0
   freezed: ^2.0.3+1
   freezed_annotation: ^2.0.3
+  flutter_staggered_grid_view: ^0.6.1
   get_it: ^7.2.0
   google_fonts: 3.0.1
   hooks_riverpod: ^2.0.0-dev.5
@@ -55,6 +57,13 @@ dev_dependencies:
   auto_route_generator: any
   build_runner: any
   flutter_lints: ^2.0.0
+  flutter_gen_runner: ^4.1.5
+
+  icons_launcher: ^1.1.8
+flutter_icons:
+  image_path: 'assets/images/logo.png'
+  ios: true
+  android: true
   flutter_test:
     sdk: flutter
 
