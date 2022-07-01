@@ -94,9 +94,10 @@ class PharmacyScreen extends HookConsumerWidget {
                     height: 40,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: Colors.white,
                       boxShadow: [
-                        BoxShadow(color: Colors.white, spreadRadius: 3),
+                        BoxShadow(
+                            color: Colors.white.withOpacity(0.5),
+                            spreadRadius: 3),
                       ],
                     ),
                     child: Center(
@@ -117,7 +118,8 @@ class PharmacyScreen extends HookConsumerWidget {
                         },
                         controller: _textController,
                         decoration: InputDecoration(
-                            fillColor: Colors.white,
+                            hintStyle: TextStyle(color: Colors.white),
+                            fillColor: Colors.white.withOpacity(0.7),
                             iconColor: Colors.white,
                             border: InputBorder.none,
                             focusedBorder: InputBorder.none,
@@ -133,14 +135,17 @@ class PharmacyScreen extends HookConsumerWidget {
                                   Icons.search,
                                   color: Colors.white,
                                 )),
-                            suffixIcon: InkWell(
-                                onTap: () {
-                                  _textController.clear();
-                                },
-                                child: const Icon(
-                                  Icons.delete,
-                                  color: Colors.white,
-                                ))),
+                            suffixIcon: Visibility(
+                              visible: false,
+                              child: InkWell(
+                                  onTap: () {
+                                    _textController.clear();
+                                  },
+                                  child: const Icon(
+                                    Icons.delete,
+                                    color: Colors.white,
+                                  )),
+                            )),
                       ),
                     ),
                   ),
