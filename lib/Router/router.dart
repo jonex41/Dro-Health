@@ -1,10 +1,15 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:dex_app/Pages/community_page/community_screen.dart';
-import 'package:dex_app/Pages/doctors_page/doctors_screen.dart';
-import 'package:dex_app/Pages/home_page/home_screen.dart';
-import 'package:dex_app/Pages/pharmacy_page/pharmacy_screen.dart';
-import 'package:dex_app/Pages/profile_page/profile_screen.dart';
+import 'package:dex_app/Pages/cart/view/cart_screen.dart';
+
 import 'package:dex_app/Router/tab_page.dart';
+
+import '../Pages/category/view/category_screen.dart';
+import '../Pages/community/view/community_screen.dart';
+import '../Pages/detail/view/detail_screen.dart';
+import '../Pages/doctors/doctors_screen.dart';
+import '../Pages/home/view/home_screen.dart';
+import '../Pages/pharmacy/view/pharmacy_screen.dart';
+import '../Pages/profile/view/profile_screen.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page|Screen,Route',
@@ -45,12 +50,6 @@ import 'package:dex_app/Router/tab_page.dart';
               path: '',
               page: DoctorScreen,
             ),
-            /*  AutoRoute(
-              path: ':detail',
-              page: ColorDetailPage,
-              // fullscreenDialog: true,
-              // meta: {'hideBottomNav': true},
-            ), */
           ],
         ),
         AutoRoute(
@@ -91,6 +90,48 @@ import 'package:dex_app/Router/tab_page.dart';
               page: ProfileScreen,
             ),
           ],
+        ),
+      ],
+    ),
+
+    AutoRoute(
+      path: 'Category',
+      page: EmptyRouterPage,
+      name: 'CategoryRouter',
+      initial: true,
+      maintainState: true,
+      children: [
+        AutoRoute(
+          path: '',
+          page: CategoryScreen,
+        ),
+      ],
+    ),
+
+    AutoRoute(
+      path: 'Cart',
+      page: EmptyRouterPage,
+      name: 'CartRouter',
+      initial: true,
+      maintainState: true,
+      children: [
+        AutoRoute(
+          path: '',
+          page: CartScreen,
+        ),
+      ],
+    ),
+
+    AutoRoute(
+      path: 'Detail',
+      page: EmptyRouterPage,
+      name: 'DetailRouter',
+      initial: true,
+      maintainState: true,
+      children: [
+        AutoRoute(
+          path: '',
+          page: DetailScreen,
         ),
       ],
     ),

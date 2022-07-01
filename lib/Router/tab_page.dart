@@ -35,6 +35,11 @@ class TabPageState extends State<TabPage> with TickerProviderStateMixin {
       icon: PhosphorIcons.house_simple,
       label: 'Home',
     ),
+    /*  RouteDestination(
+      route: PharmacyTab(),
+      icon: FontAwesomeIcons.cartPlus,
+      label: 'Pharmacy',
+    ), */
     RouteDestination(
       route: DoctorTab(),
       icon: PhosphorIcons.user_plus,
@@ -78,7 +83,7 @@ class TabPageState extends State<TabPage> with TickerProviderStateMixin {
             // there might be no active route until router is mounted
             // so we play safe
             if (activeIndex == -1) {
-              activeIndex = 0;
+              activeIndex = 2;
             }
             return Row(
               children: [
@@ -141,7 +146,7 @@ class TabPageState extends State<TabPage> with TickerProviderStateMixin {
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(
-                  PhosphorIcons.house_simple,
+                  PhosphorIcons.house,
                 ),
                 label: 'Home',
               ),
